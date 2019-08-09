@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你好啊</title>
+</head>
+<body>
+    hello world
+
+    <script>
+
+
+    const p = Promise.race([
+fetch('http://es6.ruanyifeng.com/#docs/promise#Promise-all'),
+new Promise(function (resolve, reject) {
+  setTimeout(() => reject(new Error('request timeout')), 5000)
+})
+]);
+
+p
+.then(console.log)
+.catch(console.error);
+    </script>
+</body>
+</html>
